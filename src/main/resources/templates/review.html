@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Reviews</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Reviews: </h3>
+<table border="1" cellpadding="10">
+    <th> ReviewId </th><th> PatientId </th><th> Professionalism </th><th> Communication </th><th> Cleanliness </th><th> Employee Value </th>
+    <tr th:each="review : ${reviews}">
+        <td th:text="${review.ReviewId}" ></td>
+        <td th:text="${review.PatientId}" ></td>
+        <td th:text="${review.Professionalism}" ></td>
+        <td th:text="${review.Communication}" ></td>
+        <td th:text="${review.Cleanliness}" ></td>
+        <td th:text="${review.EmployeeValue}" ></td>
+    </tr>
+</table>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

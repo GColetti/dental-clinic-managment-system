@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Add a Patient</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/bootstrap.css"
+      th:href="@{/assets/css/bootstrap.css}"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/thymeleaf-demo.css"
+      th:href="@{/assets/css/style.css}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Patient:</h3>
+      <form
+        action="#"
+        th:action="@{/createpatient}"
+        th:object="${patient}"
+        method="post"
+      >
+        <table border="0">
+          <tr>
+            <td colspan="2" align="center"><h4>Add a Patient</h4></td>
+          </tr>
+          <tr>
+            <td>User ID:</td>
+            <td><input id="UserId" type="number" th:field="*{UserId}" /></td>
+          </tr>
+          <tr>
+            <td>Patient ID:</td>
+            <td>
+              <input id="PatientId" type="number" th:field="*{PatientId}" />
+            </td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input id="Email" type="text" th:field="*{Email}" /></td>
+          </tr>
+          <tr>
+            <td>Date of Birth:</td>
+            <td><input id="DateOfBirth" type="date" th:field="*{DateOfBirth}" /></td>
+          </tr>
+          <tr>
+            <td><input type="submit" name="Submit" /></td>
+          </tr>
+        </table>
+      </form>
+      <a href="/">Home</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Dental Clinic Management System</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+        <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+    </head>
+    <body>
+        <h1>Welcome to the Dental Clinic Management System</h1>
+        <h3>Please Login</h3>
+        <div th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}">
+            You have been logged out.
+        </div>
+        <form th:action="@{/login}" method="post">
+            <div><label> Username:</label><input type="text" id = "username" name="username"/></div>
+            <div><label> Password:</label><input type="password" id = "password" name="password"/></div>
+            <div><input type="submit" value="Sign In"/></div>
+            <a href="/home" th:href="@{/home}">Back to home page</a>
+        </form>
+    </body>
+</html>

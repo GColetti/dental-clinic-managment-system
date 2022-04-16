@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+  <head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/bootstrap.css"
+      th:href="@{/assets/css/bootstrap.css}"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/thymeleaf-demo.css"
+      th:href="@{/assets/css/style.css}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Receptionist View</h2>
+      <ul>
+        <li class="style1"><a href="/appointments"> View Appointments </a></li>
+
+        <li class="style1">
+          <a href="/createappointmentform"> Create an Appointment </a>
+        </li>
+        <li class="style1"><a href="/dentistappointments"> View Dental Appointments </a></li>
+        <li class="style1">
+          <a href="/createdentistappointmentform"> Create a Dental Appointment </a>
+        </li>
+        <li class="style1"><a href="/branches"> View Branches </a></li>
+
+        <li class="style1">
+          <a href="/createbranchform"> Create a Branch </a>
+        </li>
+
+        <li class="style1">
+          <a href="/dentalprocedures"> View Dental Procedures </a>
+        </li>
+
+        <li class="style1">
+          <a href="/createdentalprocedureform"> Create a Dental Procedure </a>
+        </li>
+
+        <li class="style1"><a href="/patient"> View Patients </a></li>
+
+        <li class="style1">
+          <a href="/createpatient"> Create a Patient </a>
+        </li>
+
+        <li class="style1"><a href="/invoices"> View Invoices </a></li>
+
+        <li class="style1">
+          <a href="/createinvoiceform"> Create an Invoice </a>
+        </li>
+
+        <li class="style1"><a href="/employees"> View Employees </a></li>
+
+        <li class="style1">
+          <a href="/createemployeeform"> Create an Employee </a>
+        </li>
+
+        <li class="style1"><a href="/dentalprofessionals"> View Dental Professionals </a></li>
+
+        <li class="style1">
+          <a href="/createdentalprofessionalform"> Create a Dental Professional </a>
+        </li>
+
+        <li class="style1"><a href="/review"> View Reviews </a></li>
+        <form th:action="@{/logout}" method="post">
+          <input type="submit" value="Sign Out"/>
+        </form>
+      </ul>
+      
+    </div>
+  </body>
+</html>

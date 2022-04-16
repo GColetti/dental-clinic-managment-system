@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Dental Clinic Management System</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+      <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+   </head>
+   <body>
+      <div class="container">
+         <h3> Branches: </h3>
+         <table border="1" cellpadding="10">
+            <th>BranchId </th><th> City</th>
+            <tr th:each="branch : ${branches}">
+               <td th:text="${branch.BranchId}" ></td>
+               <td th:text="${branch.City}" ></td>
+            </tr>
+         </table>
+         <a href="/home">Home</a>
+      </div>
+   </body>
+</html>

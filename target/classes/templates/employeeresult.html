@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="employee">
+<h3>Employee created successfully!</h3>
+<p th:text="'User Id: '  + ${employee.UserId}" />
+<p th:text="'Employee Id: ' + ${employee.EmployeeId}" />
+<p th:text="'Employee Email: ' + ${employee.EmployeeEmail}" />
+<p th:text="'Salary: ' + ${employee.Salary}" />
+<a href="/createemployeeform">Create Another Employee</a>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

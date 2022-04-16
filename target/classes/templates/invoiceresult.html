@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="invoice">
+<h3>Invoice created successfully!</h3>
+<p th:text="'Invoice Id: ' + ${invoice.InvoiceId}" />
+<p th:text="'User Id: ' + ${invoice.UserId}" />
+<p th:text="'Receptionist Id: ' + ${invoice.ReceptionistId}" />
+<p th:text="'Fee Id: ' + ${invoice.FeeId}" />
+<p th:text="'Insurance Claim Id: ' + ${invoice.InsuranceClaimId}" />
+<p th:text="'Date Of Issue: ' + ${invoice.DateOfIssue}" />
+<p th:text="'Contact: ' + ${invoice.Contact}" />
+<p th:text="'Patient Charge: ' + ${invoice.PatientCharge}" />
+<p th:text="'Insurance Charge: ' + ${invoice.InsuranceCharge}" />
+<p th:text="'Total Charge: ' + ${invoice.TotalCharge}" />
+<p th:text="'Discount: ' + ${invoice.Discount}" />
+<p th:text="'Penalty: ' + ${invoice.Penalty}" />
+<p th:text="'Payment Type: ' + ${invoice.PaymentType}" />
+<a href="/createinvoiceform">Create Another Invoice</a>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

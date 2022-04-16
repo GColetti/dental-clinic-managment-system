@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Invoices: </h3>
+    <form action="#" th:action="@{/createinvoice}" th:object="${invoice}" method="post">
+        <table border="0">
+            <tr>
+                <td colspan="2" align="center"><h4>Create Invoice</h4></td>
+            </tr>
+            <tr>
+                <td>Invoice Id:</td>
+                <td><input id="InvoiceId" type="number" th:field="*{InvoiceId}"/></td>
+            </tr>
+            <tr>
+                <td>User Id:</td>
+                <td><input id="UserId" type="number" th:field="*{UserId}"/></td>
+            </tr>
+            <tr>
+                <td>Receptionist Id:</td>
+                <td><input id="ReceptionistId" type="number" th:field="*{ReceptionistId}"/></td>
+            </tr>
+            <tr>
+                <td>Fee Id:</td>
+                <td><input id="FeeId" type="number" th:field="*{FeeId}"/></td>
+            </tr>
+            <tr>
+                <td>Insurance Claim Id:</td>
+                <td><input id="InsuranceClaimId" type="number" th:field="*{InsuranceClaimId}"/></td>
+            </tr>
+            <tr>
+                <td>Date Of Issue:</td>
+                <td><input id="DateOfIssue" type="date" th:field="*{DateOfIssue}"/></td>
+            </tr>
+            <tr>
+                <td>Contact:</td>
+                <td><input id="Contact" type="text" th:field="*{Contact}"/></td>
+            </tr>
+            <tr>
+                <td>Patient Charge:</td>
+                <td><input id="PatientCharge" type="number" th:field="*{PatientCharge}"/></td>
+            </tr>
+            <tr>
+                <td>Insurance Charge:</td>
+                <td><input id="Insurance Charge" type="number" th:field="*{InsuranceCharge}"/></td>
+            </tr>
+            <tr>
+                <td>Total Charge:</td>
+                <td><input id="TotalCharge" type="number" th:field="*{TotalCharge}"/></td>
+            </tr>
+            <tr>
+                <td>Discount:</td>
+                <td><input id="Discount" type="number" th:field="*{Discount}"/></td>
+            </tr>
+            <tr>
+                <td>Penalty:</td>
+                <td><input id="Penalty" type="number" th:field="*{Penalty}"/></td>
+            </tr>
+            <tr>
+                <td>Payment Type:</td>
+                <td><input id="PaymentType" type="text" th:field="*{PaymentType}"/></td>
+            </tr>
+            <tr><td><input type="submit" name="Submit"/></td></tr>
+
+        </table>
+    </form>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

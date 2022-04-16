@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Dental Professionals: </h3>
+    <form action="#" th:action="@{/createdentalprofessional}" th:object="${dentalprofessional}" method="post">
+        <table border="0">
+            <tr>
+                <td colspan="2" align="center"><h4>Create Dental Professional</h4></td>
+            </tr>
+            <tr>
+                <td>Branch Id:</td>
+                <td><input id="branchid" type="number" th:field="*{BranchId}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Id:</td>
+                <td><input id="employeeid" type="number" th:field="*{EmployeeId}"/></td>
+            </tr>
+            <tr>
+                <td>Dental Professional Role:</td>
+                <td><input id="dprole" type="text" th:field="*{DpRole}"/></td>
+            </tr>
+            <tr><td><input type="submit" name="Submit"/></td></tr>
+
+        </table>
+    </form>
+    <a href="/">Home</a>
+</div>
+</body>
+</html>

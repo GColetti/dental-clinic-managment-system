@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+        <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+    </head>
+    <body>
+        <h1>Welcome to the Dental Clinic Management System </h1>
+        <form th:action="@{/adminview}" method="post">
+            <input type="submit" value="Admin"/>
+        </form>
+        <form th:action="@{/employeeview}" method="post">
+            <input type="submit" value="Employee"/>
+        </form>
+        <form th:action="@{/patientview}" method="post">
+            <input type="submit" value="Patient"/>
+        </form>
+    </body>
+</html>

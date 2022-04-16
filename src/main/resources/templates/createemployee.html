@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Employees: </h3>
+    <form action="#" th:action="@{/createemployee}" th:object="${employee}" method="post">
+        <table border="0">
+            <tr>
+                <td colspan="2" align="center"><h4>Create Employee</h4></td>
+            </tr>
+            <tr>
+                <td>User Id:</td>
+                <td><input id="userid" type="number" th:field="*{UserId}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Id:</td>
+                <td><input id="EmployeeId" type="number" th:field="*{EmployeeId}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Email:</td>
+                <td><input id="EmployeeEmail" type="text" th:field="*{EmployeeEmail}"/></td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td><input id="Salary" type="number" th:field="*{Salary}"/></td>
+            </tr>
+            <tr><td><input type="submit" name="Submit"/></td></tr>
+
+        </table>
+    </form>
+    <a href="/">Home</a>
+</div>
+</body>
+</html>

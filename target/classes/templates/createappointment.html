@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Appointments: </h3>
+    <form action="#" th:action="@{/createappointment}" th:object="${appointment}" method="post">
+        <table border="1" cellpadding="10">
+            <tr>
+                <td colspan="2" align="center"><h4>Create Appointment</h4></td>
+            </tr>
+            <tr>
+                <td>Appointment Id:</td>
+                <td><input id="appointmentid" type="number" th:field="*{AppointmentId}"/></td>
+            </tr>
+            <tr>
+                <td>Patient Id:</td>
+                <td><input id="PatientId" type="number" th:field="*{PatientId}"/></td>
+            </tr>
+            <tr>
+                <td>Appointment Date:</td>
+                <td><input id="ApptDate" type="date" th:field="*{ApptDate}"/></td>
+            </tr>
+            <tr>
+                <td>Start Time:</td>
+                <td><input id="StartTime" type="time" th:field="*{StartTime}"/></td>
+            </tr>
+            <tr>
+                <td>End Time:</td>
+                <td><input id="EndTime" type="time" th:field="*{EndTime}"/></td>
+            </tr>
+            <tr>
+                <td>Appointment Type:</td>
+                <td><input id="AppointmentType" type="text" th:field="*{AppointmentType}"/></td>
+            </tr>
+            <tr>
+                <td>Status:</td>
+                <td><input id="Status" type="text" th:field="*{Status}"/></td>
+            </tr>
+            <tr>
+                <td>Room:</td>
+                <td><input id="RoomAssigned" type="number" th:field="*{RoomAssigned}"/></td>
+            </tr>
+            <tr><td><input type="submit" name="Submit"/></td></tr>
+
+        </table>
+    </form>
+    <a href="/">Home</a>
+</div>
+</body>
+</html>

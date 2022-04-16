@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+  </head>
+  <body>
+    <div class="patient">
+      <h3>Patient added successfully!</h3>
+      <p th:text="'User Id: ' + ${patient.UserId}" />
+      <p th:text="'Patient Id: ' + ${patient.PatientId}" />
+      <p th:text="'Email: ' + ${patient.Email}" />
+      <p th:text="'Date Of Birth: ' + ${patient.DateOfBirth}" />
+
+      <a href="/createpatient">Add Another Patient</a>
+      <a href="/">Home</a>
+    </div>
+  </body>
+</html>

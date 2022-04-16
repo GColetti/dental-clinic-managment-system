@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Invoices: </h3>
+<table border="1" cellpadding="10">
+    <th> InvoiceId </th><th> UserId </th><th> ReceptionistId </th><th> FeeId </th><th> InsuranceClaimId </th><th> DateOfIssue </th><th> Contact </th><th> PatientCharge </th><th> InsuranceCharge </th><th> TotalCharge </th><th> Discount </th><th> Penalty </th><th> PaymentType </th>
+<tr th:each="invoice : ${invoices}">
+    <td th:text="${invoice.InvoiceId}" ></td>
+    <td th:text="${invoice.UserId}" ></td>
+    <td th:text="${invoice.ReceptionistId}" ></td>
+    <td th:text="${invoice.FeeId}" ></td>
+    <td th:text="${invoice.InsuranceClaimId}" ></td>
+    <td th:text="${invoice.DateOfIssue}" ></td>
+    <td th:text="${invoice.Contact}" ></td>
+    <td th:text="${invoice.PatientCharge}" ></td>
+    <td th:text="${invoice.InsuranceCharge}" ></td>
+    <td th:text="${invoice.TotalCharge}" ></td>
+    <td th:text="${invoice.Discount}" ></td>
+    <td th:text="${invoice.Penalty}" ></td>
+    <td th:text="${invoice.PaymentType}" ></td>
+</tr>
+</table>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

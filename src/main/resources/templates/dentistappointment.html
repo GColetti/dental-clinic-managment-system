@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dentist Appointments</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Dentist Appointment: </h3>
+<table border="1" cellpadding="10">
+<th> AppointmentId </th><th> DentistId </th>
+<tr th:each="dentistappointment : ${dentistappointments}">
+    <td th:text="${dentistappointment.AppointmentId}" ></td>
+    <td th:text="${dentistappointment.DentistId}" ></td>
+</tr>
+</table>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

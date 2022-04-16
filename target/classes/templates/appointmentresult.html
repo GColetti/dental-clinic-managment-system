@@ -1,0 +1,25 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="appointment">
+<h3>Appointment created successfully!</h3>
+<p th:text="'Appointment: '  + ${appointment.AppointmentId}" />
+<p th:text="'Patient: ' + ${appointment.PatientId}" />
+<p th:text="'Date: ' + ${appointment.ApptDate}" />
+<p th:text="'Start Time: ' + ${appointment.StartTime}" />
+<p th:text="'End Time: ' + ${appointment.EndTime}" />
+<p th:text="'Type: ' + ${appointment.AppointmentType}" />
+<p th:text="'Status: ' + ${appointment.Status}" />
+<p th:text="'Room: ' + ${appointment.RoomAssigned}" />
+<a href="/createappointmentform">Create Another Appointment</a>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

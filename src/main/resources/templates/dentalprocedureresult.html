@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="dentalprocedure">
+<h3>Dental procedure created successfully!</h3>
+<p th:text="'Procedure code: ' + ${dentalprocedure.ProcedureCode}" />
+<p th:text="'Procedure type: ' + ${dentalprocedure.ProcedureType}" />
+<p th:text="'Description: ' + ${dentalprocedure.Description}" />
+<p th:text="'Total charge: ' + ${dentalprocedure.TotalCharge}" />
+
+<a href="/createdentalprocedureform">Create Another Dental Procedure</a>
+<a href="/">Home</a>
+</div>
+</body>
+</html>

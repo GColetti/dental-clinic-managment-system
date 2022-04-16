@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/bootstrap.css"
+      th:href="@{/assets/css/bootstrap.css}"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/thymeleaf-demo.css"
+      th:href="@{/assets/css/style.css}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Review:</h3>
+      <form
+        action="#"
+        th:action="@{/createreview}"
+        th:object="${review}"
+        method="post"
+      >
+        <table border="0">
+          <tr>
+            <td colspan="2" align="center"><h4>Create Review</h4></td>
+          </tr>
+
+          <tr>
+            <td>Review ID:</td>
+            <td>
+              <input id="reviewid" type="number" th:field="*{ReviewId}" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Patient ID:</td>
+            <td>
+              <input id="patientid" type="number" th:field="*{PatientId}" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Professionalism:</td>
+            <td>
+              <input
+                id="professionalism"
+                type="number"
+                th:field="*{Professionalism}"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Communication:</td>
+            <td>
+              <input
+                id="communication"
+                type="number"
+                th:field="*{Communication}"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Cleanliness:</td>
+            <td>
+              <input id="cleanliness" type="number" th:field="*{Cleanliness}" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Employee Value:</td>
+            <td>
+              <input
+                id="employeevalue"
+                type="number"
+                th:field="*{EmployeeValue}"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="submit" name="Submit" /></td>
+          </tr>
+        </table>
+      </form>
+      <a href="/">Home</a>
+    </div>
+  </body>
+</html>

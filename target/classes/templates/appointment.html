@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dental Clinic Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+    <link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+<div class="container">
+<h3> Appointments: </h3>
+<table border="1" cellpadding="10">
+<th> Id </th><th> AppointmentId </th><th> PatientId </th><th> ApptDate </th><th> StartTime </th><th> EndTime </th><th> AppointmentType </th><th> Status </th><th> RoomAssigned </th>
+<tr th:each="appointment : ${appointments}">
+    <td th:text="${appointment.AppointmentId}" ></td>
+    <td th:text="${appointment.PatientId}" ></td>
+    <td th:text="${appointment.ApptDate}" ></td>
+    <td th:text="${appointment.StartTime}" ></td>
+    <td th:text="${appointment.EndTime}" ></td>
+    <td th:text="${appointment.AppointmentType}" ></td>
+    <td th:text="${appointment.Status}" ></td>
+    <td th:text="${appointment.RoomAssigned}" ></td>
+</tr>
+</table>
+<a href="/">Home</a>
+</div>
+</body>
+</html>
